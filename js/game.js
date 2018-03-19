@@ -6,24 +6,39 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "Do You Want to Be a Billionaire",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "YES",
+                    nextLevel: "money",
                 },
 
                 {
-                    text: "Keep on moving",
+                    text: "NAW",
                     nextLevel: "field",
                 },
             ]
         },
 
-        cave: {
+        money: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "YOU JUST GAINED $100,000",
+            choices: [
+                {
+                    text: "Spend dat bihh",
+                    nextLevel: "brokie",
+                },
+                
+                {
+                    text: "Invest it",
+                    nextLevel: "investments",
+                },
+            ]
+        },
+        
+        brokie: {
+            message: "Damnnn Now You a Broke Bum :( ",
             choices: [
                 {
                     text: "Start over",
@@ -33,11 +48,60 @@ var game = {
         },
 
         field: {
-            message: "Some adventurer you are...",
+            message: "So You Wanna Be a Loserrrr?? GO Make Some Money Moves !",
             choices: [
                 {
                     text: "Start over",
                     nextLevel: "start",
+                },
+            ]
+        },
+        
+        investments: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "PICK YOUR POISON",
+            choices: [
+                {
+                    text: "STOCKS",
+                    nextLevel: "stocks",
+                },
+                
+                {
+                    text: "PROPERTY",
+                    nextLevel: "property",
+                },
+            ]
+        },
+        
+        stocks: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "PICK YOUR POISON",
+            choices: [
+                {
+                    text: "SNAPCHAT",
+                    nextLevel: "sc.bio",
+                },
+                
+                {
+                    text: "NORDSTROMS",
+                    nextLevel: "nord.bio",
+                },
+                
+                {
+                    text: "AMGEN",
+                    nextLevel: "amg.bio",
+                },
+                
+                {
+                    text: "NETFLIX",
+                    nextLevel: "net.bio",
+                },
+                
+                {
+                    text: "CARVANA",
+                    nextLevel: "car.bio",
                 },
             ]
         },
